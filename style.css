@@ -1,152 +1,393 @@
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body {
-
-    margin: 0;
-
-    font-family: Arial, sans-serif;
-
-    background: #f2f4f7;
-
-    color: #222;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b0f19;
+    color: #ffffff;
+    min-height: 100vh;
 }
 
 
-/* Top Navigation */
+/* =========================
+   LOGIN PAGE
+========================= */
 
-.topbar {
+.login-page {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        linear-gradient(rgba(5, 8, 15, 0.85), rgba(5, 8, 15, 0.95)),
+        radial-gradient(circle at top, #263b65, #080b12 65%);
+
+    padding: 20px;
+}
+
+
+.login-box {
+    width: 400px;
+    max-width: 100%;
+
+    padding: 42px 35px;
+
+    background: rgba(20, 26, 40, 0.95);
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 25px 70px rgba(0,0,0,0.55);
+
+    text-align: center;
+}
+
+
+.login-box h1 {
+    font-size: 32px;
+
+    margin-bottom: 8px;
+}
+
+
+.login-box h2 {
+    color: #aeb7c9;
+
+    font-size: 17px;
+
+    font-weight: normal;
+
+    margin-bottom: 28px;
+}
+
+
+.login-box form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+
+.login-box input {
+    width: 100%;
+
+    padding: 15px 16px;
 
     background: #111827;
 
+    border: 1px solid #293449;
+
+    border-radius: 10px;
+
     color: white;
 
-    padding: 18px 6%;
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.25s;
+}
+
+
+.login-box input:focus {
+    border-color: #e50914;
+
+    box-shadow: 0 0 0 3px rgba(229,9,20,0.15);
+}
+
+
+.login-box button {
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: linear-gradient(135deg, #e50914, #b20710);
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+
+.login-box button:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 10px 25px rgba(229,9,20,0.25);
+}
+
+
+.login-box::after {
+    content: "Search thousands of movies instantly";
+
+    display: block;
+
+    color: #778196;
+
+    font-size: 12px;
+
+    margin-top: 22px;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.topbar {
+    height: 72px;
+
+    padding: 0 7%;
 
     display: flex;
 
+    align-items: center;
+
     justify-content: space-between;
 
-    align-items: center;
+    background: rgba(10, 14, 24, 0.95);
+
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 10;
 }
 
 
 .topbar h1 {
+    font-size: 23px;
 
-    margin: 0;
-
+    letter-spacing: -0.5px;
 }
 
 
 .topbar a {
-
     color: white;
 
     text-decoration: none;
 
-    background: #dc2626;
+    background: #1a2232;
 
-    padding: 9px 15px;
+    padding: 9px 16px;
 
-    border-radius: 6px;
+    border-radius: 8px;
 
+    font-size: 14px;
+
+    transition: 0.2s;
 }
 
 
-/* Main Container */
+.topbar a:hover {
+    background: #e50914;
+}
+
+
+/* =========================
+   MAIN
+========================= */
 
 .container {
+    width: min(1050px, 90%);
 
-    width: min(1000px, 92%);
+    margin: 0 auto;
 
-    margin: 35px auto;
-
+    padding: 65px 0 80px;
 }
 
 
-/* Search */
+.container::before {
+    content: "DISCOVER YOUR NEXT MOVIE";
+
+    display: block;
+
+    text-align: center;
+
+    color: #e50914;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 12px;
+}
+
+
+.container::after {
+    content: "Search movies, actors, directors and more";
+
+    display: block;
+
+    text-align: center;
+
+    color: #8993a7;
+
+    font-size: 15px;
+
+    margin-top: -100px;
+
+    margin-bottom: 45px;
+}
+
+
+/* =========================
+   SEARCH BAR
+========================= */
 
 .search-form {
+    width: min(720px, 100%);
+
+    margin: 0 auto 45px;
 
     display: flex;
 
     gap: 10px;
 
-    margin-bottom: 30px;
+    background: #111827;
 
+    padding: 8px;
+
+    border-radius: 14px;
+
+    border: 1px solid #273247;
+
+    box-shadow: 0 15px 45px rgba(0,0,0,0.3);
 }
 
 
 .search-form input {
-
     flex: 1;
 
-    padding: 14px;
+    min-width: 0;
 
-    border: 1px solid #bbb;
+    padding: 14px 17px;
 
-    border-radius: 7px;
+    background: transparent;
 
-    font-size: 16px;
+    border: none;
 
-}
-
-
-button {
-
-    border: 0;
-
-    background: #2563eb;
+    outline: none;
 
     color: white;
 
-    padding: 13px 22px;
-
-    border-radius: 7px;
-
-    cursor: pointer;
-
     font-size: 16px;
-
 }
 
 
-/* Movie Card */
+.search-form input::placeholder {
+    color: #68748a;
+}
+
+
+.search-form button {
+    padding: 0 25px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #e50914;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+
+.search-form button:hover {
+    background: #f6121d;
+
+    transform: scale(1.02);
+}
+
+
+/* =========================
+   MOVIE CARD
+========================= */
 
 .movie-card {
+    display: grid;
 
-    background: white;
+    grid-template-columns: 280px 1fr;
 
-    padding: 25px;
+    gap: 35px;
 
-    border-radius: 12px;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(27,35,52,0.95),
+            rgba(14,19,30,0.98)
+        );
 
-    display: flex;
+    padding: 28px;
 
-    gap: 30px;
+    border-radius: 18px;
 
-    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+    border: 1px solid rgba(255,255,255,0.08);
+
+    box-shadow: 0 25px 70px rgba(0,0,0,0.45);
+
+    animation: appear 0.45s ease;
+}
+
+
+@keyframes appear {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 
 }
 
 
 .poster img {
+    width: 100%;
 
-    width: 260px;
+    display: block;
 
-    max-width: 100%;
+    border-radius: 12px;
 
-    border-radius: 8px;
-
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
 }
 
 
 .no-poster {
-
-    width: 260px;
-
-    height: 380px;
+    height: 400px;
 
     display: flex;
 
@@ -154,143 +395,169 @@ button {
 
     justify-content: center;
 
-    background: #ddd;
+    background: #171e2d;
 
-    border-radius: 8px;
+    border-radius: 12px;
 
+    color: #68748a;
 }
 
 
+/* =========================
+   MOVIE DETAILS
+========================= */
+
 .details {
-
-    flex: 1;
-
+    padding: 5px 0;
 }
 
 
 .details h2 {
+    font-size: 38px;
 
-    margin-top: 0;
+    line-height: 1.1;
 
-    font-size: 30px;
-
+    margin-bottom: 22px;
 }
 
 
-/* Messages */
+.details p {
+    color: #aeb7c9;
+
+    line-height: 1.65;
+
+    margin-bottom: 10px;
+
+    font-size: 15px;
+}
+
+
+.details strong {
+    color: #ffffff;
+}
+
+
+.details p:last-child {
+    margin-top: 20px;
+
+    padding-top: 18px;
+
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+
+/* =========================
+   ERROR / MESSAGE
+========================= */
 
 .message {
+    width: min(720px, 100%);
 
-    background: white;
+    margin: auto;
 
-    padding: 18px;
+    padding: 17px 20px;
 
-    border-radius: 8px;
+    border-radius: 10px;
 
+    background: #171e2d;
+
+    text-align: center;
 }
 
 
 .error {
+    color: #ff6b72;
 
-    color: #b91c1c;
-
-    background: #fee2e2;
-
-    padding: 10px;
-
-    border-radius: 6px;
-
+    border: 1px solid rgba(229,9,20,0.25);
 }
 
 
-/* Login */
+/* =========================
+   MOBILE
+========================= */
 
-.login-page {
+@media (max-width: 750px) {
 
-    min-height: 100vh;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-}
-
-
-.login-box {
-
-    width: 360px;
-
-    max-width: 90%;
-
-    background: white;
-
-    padding: 30px;
-
-    border-radius: 12px;
-
-    box-shadow: 0 4px 20px rgba(0,0,0,0.12);
-
-    text-align: center;
-
-}
-
-
-.login-box h1 {
-
-    margin-top: 0;
-
-}
-
-
-.login-box form {
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 12px;
-
-}
-
-
-.login-box input {
-
-    padding: 13px;
-
-    border: 1px solid #bbb;
-
-    border-radius: 7px;
-
-    font-size: 15px;
-
-}
-
-
-/* Mobile */
-
-@media (max-width: 700px) {
-
-    .movie-card {
-
-        flex-direction: column;
-
+    .topbar {
+        padding: 0 5%;
     }
 
 
-    .poster img,
-    .no-poster {
+    .topbar h1 {
+        font-size: 18px;
+    }
 
-        width: 220px;
 
+    .container {
+        width: 92%;
+
+        padding-top: 45px;
     }
 
 
     .search-form {
+        flex-direction: row;
+    }
 
-        flex-direction: column;
 
+    .search-form button {
+        padding: 0 17px;
+    }
+
+
+    .movie-card {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+        padding: 20px;
+    }
+
+
+    .poster {
+        width: min(260px, 100%);
+
+        margin: auto;
+    }
+
+
+    .details h2 {
+        font-size: 28px;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .login-box {
+        padding: 32px 22px;
+    }
+
+
+    .container::before {
+        font-size: 11px;
+
+        letter-spacing: 2px;
+    }
+
+
+    .search-form {
+        padding: 5px;
+    }
+
+
+    .search-form input {
+        font-size: 14px;
+
+        padding: 12px;
+    }
+
+
+    .search-form button {
+        padding: 0 13px;
+
+        font-size: 14px;
     }
 
 }
