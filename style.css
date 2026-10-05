@@ -1,0 +1,296 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    background: #f2f4f7;
+
+    color: #222;
+}
+
+
+/* Top Navigation */
+
+.topbar {
+
+    background: #111827;
+
+    color: white;
+
+    padding: 18px 6%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+.topbar h1 {
+
+    margin: 0;
+
+}
+
+
+.topbar a {
+
+    color: white;
+
+    text-decoration: none;
+
+    background: #dc2626;
+
+    padding: 9px 15px;
+
+    border-radius: 6px;
+
+}
+
+
+/* Main Container */
+
+.container {
+
+    width: min(1000px, 92%);
+
+    margin: 35px auto;
+
+}
+
+
+/* Search */
+
+.search-form {
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.search-form input {
+
+    flex: 1;
+
+    padding: 14px;
+
+    border: 1px solid #bbb;
+
+    border-radius: 7px;
+
+    font-size: 16px;
+
+}
+
+
+button {
+
+    border: 0;
+
+    background: #2563eb;
+
+    color: white;
+
+    padding: 13px 22px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+}
+
+
+/* Movie Card */
+
+.movie-card {
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    gap: 30px;
+
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.poster img {
+
+    width: 260px;
+
+    max-width: 100%;
+
+    border-radius: 8px;
+
+}
+
+
+.no-poster {
+
+    width: 260px;
+
+    height: 380px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #ddd;
+
+    border-radius: 8px;
+
+}
+
+
+.details {
+
+    flex: 1;
+
+}
+
+
+.details h2 {
+
+    margin-top: 0;
+
+    font-size: 30px;
+
+}
+
+
+/* Messages */
+
+.message {
+
+    background: white;
+
+    padding: 18px;
+
+    border-radius: 8px;
+
+}
+
+
+.error {
+
+    color: #b91c1c;
+
+    background: #fee2e2;
+
+    padding: 10px;
+
+    border-radius: 6px;
+
+}
+
+
+/* Login */
+
+.login-page {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.login-box {
+
+    width: 360px;
+
+    max-width: 90%;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+
+    text-align: center;
+
+}
+
+
+.login-box h1 {
+
+    margin-top: 0;
+
+}
+
+
+.login-box form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+}
+
+
+.login-box input {
+
+    padding: 13px;
+
+    border: 1px solid #bbb;
+
+    border-radius: 7px;
+
+    font-size: 15px;
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .movie-card {
+
+        flex-direction: column;
+
+    }
+
+
+    .poster img,
+    .no-poster {
+
+        width: 220px;
+
+    }
+
+
+    .search-form {
+
+        flex-direction: column;
+
+    }
+
+}
